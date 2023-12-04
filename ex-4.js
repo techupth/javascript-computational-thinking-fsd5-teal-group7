@@ -82,3 +82,12 @@ let orders = [
 ];
 
 // Start coding here
+let topPrice= orders[0].productPrice
+let result=null
+for (let i=0; i<orders.length; i++){
+  if(topPrice < orders[i].productPrice){
+    topPrice= orders[i].productPrice
+    result= orders[i].productName
+  }
+}
+console.log(result)
