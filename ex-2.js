@@ -82,3 +82,19 @@ let orders = [
 ];
 
 // Start coding here
+
+//const fruits = ["Banana", "Orange", "Apple", "Mango"];
+//console.log(fruits.includes("Mango"));
+
+let total = 0;
+
+//for (let i=0;i<orders.length; i++ ) { total= (orders[i].productPrice.inclued("jcb") * orders[i].productQuantity.inclued("jcb")) + total;}
+for (let i = 0; i < orders.length; i++) {
+  if (orders[i].creditCardType === "jcb") {
+    {
+      total += orders[i].productPrice * orders[i].productQuantity;
+    }
+  }
+}
+
+console.log("Paid by JCB credit card amount:" + total + "baht");

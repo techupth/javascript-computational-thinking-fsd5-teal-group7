@@ -82,3 +82,18 @@ let orders = [
 ];
 
 // Start coding here
+
+//need all productprice* all productQuantiy ต้อง () แยกทีล่ะ order > then we Sum all
+//Tool we use= Function  loop   vari
+//result we need =  Total amount of the orders: 62,255,151 Baht
+let total = 0;
+
+//function mul1 (a,b ) {return a * b;}
+
+//console.log(mul1(orders[0].productPrice,orders[0].productQuantity))
+
+for (let i = 0; i < orders.length; i++) {
+  total = orders[i].productPrice * orders[i].productQuantity + total;
+}
+
+console.log("Total amount of the orders:" + total + "Baht");

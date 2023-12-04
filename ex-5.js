@@ -82,3 +82,19 @@ let orders = [
 ];
 
 // Start coding here
+let MexpensiveO = orders[0];
+//let amount = 0;
+
+for (let i = 0; i < orders.length; i++) {
+  if (
+    MexpensiveO.productPrice * MexpensiveO.productQuantity <
+    orders[i].productPrice * orders[i].productQuantity
+  ) {
+    MexpensiveO = orders[i];
+  }
+}
+
+console.log(`The most expensive order is order id ${MexpensiveO.id} (${
+  MexpensiveO.productPrice * MexpensiveO.productQuantity
+} Baht) 
+`);
